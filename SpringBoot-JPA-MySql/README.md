@@ -48,3 +48,7 @@ Input data format -
 
 See all menu items for a Restaurent - GET
 http://localhost:8080/rest/restaurent/{restaurentId}/menu-items
+
+*********************
+EhCache implementation for Restaurent details based on id - GET
+http://localhost:8080/rest/restaurent/{id} <br>

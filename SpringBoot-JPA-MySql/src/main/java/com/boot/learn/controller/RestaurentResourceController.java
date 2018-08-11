@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.boot.learn.ehcache.config.RestaurentCache;
 import com.boot.learn.model.Item;
 import com.boot.learn.model.Menu;
 import com.boot.learn.model.Restaurent;
@@ -36,6 +37,9 @@ public class RestaurentResourceController {
 
 	@Autowired
 	private MenuRepository menuRepository;
+	
+	@Autowired
+	private RestaurentCache restaurentCache;
 
 
 	@GetMapping(value = "/")
@@ -50,8 +54,10 @@ public class RestaurentResourceController {
 
 	@GetMapping(value = "/{id}")
 	public Optional<Restaurent> getRestaurentDetailsById(@PathVariable final long id) {
-		return restaurentRepository.findById(id);
+		//return restaurentRepository.findById(id);
+		return restaurentCache.getRestaurentById(id);
 	}
+	
 
 	@PostMapping(value = "/addnew")
 	public String persistNewRestaurent(@RequestBody final Restaurent restaurent) {
