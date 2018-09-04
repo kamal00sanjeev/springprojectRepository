@@ -52,3 +52,7 @@ http://localhost:8080/rest/restaurent/{restaurentId}/menu-items
 *********************
 EhCache implementation for Restaurent details based on id - GET
 http://localhost:8080/rest/restaurent/{id} <br>
+
+Swagger:
+==============
+To check API info and test endpoints:  http://localhost:8080/swagger-ui.html
