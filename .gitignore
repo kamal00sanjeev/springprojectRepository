@@ -1,6 +1,20 @@
 
 ### ECLIPSE ###
+
 /RemoteSystemsTempFiles/
+
 .metadata
+
 .recommenders
+
 *.jks
+
+*/.classpath
+
+*/.settings/*
+
+*/.project
+
+/Honey*
+
+/Just*
