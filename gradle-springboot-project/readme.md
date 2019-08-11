@@ -18,3 +18,13 @@ plugins {
 then hit this command
 
 $ gradlew cleanEclipse eclipse
+
+# To build and run
+
+$ gradlew bootJar
+
+$ java -jar build/libs/gradle-springboot-project.jar
+
+OR
+
+$ gradlew bootRun
